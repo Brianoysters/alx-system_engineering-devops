@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #script duplicates web-01 to web-02
 
-echo -e "Updating and doing some minor checks...\n"
+echo -e "Updating...\n"
 
 function install() {
 	command -v "$1" &> /dev/null
@@ -21,10 +21,10 @@ install nginx #install nginx
 
 echo -e "\nSetting up preliminaries.\n"
 
-#permit nginx operation on firewall
+#permits nginx operation on firewall
 sudo ufw allow 'Nginx HTTP'
 
-#authorize users
+#authorizes users
 if [ -d "/var/www" ]; then
 	sudo chown -R "$USER":"$USER" /var/www
 	sudo chmod -R 755 /var/www
