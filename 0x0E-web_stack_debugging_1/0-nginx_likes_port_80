@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#Restoring the default server port
+
+prev_server ="listen 8080 default_server;"
+current_server ="listen 80 default_server;"
+sudo sed -i "s/$prev_server/$current_server/" /etc/nginx/sites-enabled/default
+sudo sed -i "22d" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+
