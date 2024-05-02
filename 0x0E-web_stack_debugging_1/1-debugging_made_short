@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Briefed solution
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
-kill "$(pgrep 'nginx' | head -1)"
-
+service nginx start
+curl 0:80
+service nginx status | grep "nginx is not running"
