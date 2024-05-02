@@ -1,0 +1,5 @@
+./0-nginx_likes_port_80: line 4: prev_server: command not found
+./0-nginx_likes_port_80: line 5: current_server: command not found
+sed: -e expression #1, char 0: no previous regular expression
+ * Restarting nginx nginx
+   ...done.
